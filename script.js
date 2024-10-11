@@ -50,7 +50,6 @@ function loader() {
     stagger: 0.2,
   });
 }
-
 function cursor() {
   document.addEventListener("mousemove", function (e) {
     var x = e.clientX;
@@ -63,7 +62,6 @@ function cursor() {
       ease: "elastic.out(1,0.2)",
     });
   });
-  var crsr = document.querySelector("#crsr");
 
   Shery.makeMagnet("#nav-part2 h2,#nav h1");
 
@@ -91,6 +89,172 @@ function cursor() {
     });
   });
 }
-loader();
+function videoCrsr() {
+  const vContainer = document.getElementById("video-container");
+  const videoCrsr = document.getElementById("video-crsr");
+  const customCrsr = document.getElementById("crsr");
+  const videoImg = document.querySelector("#video-img-container img");
+  const video1 = document.querySelector(
+    "#video-img-container video:nth-child(2)"
+  );
+  const video2 = document.querySelector(
+    "#video-img-container video:nth-child(3)"
+  );
+  let videos = [video1, video2];
 
+  vContainer.addEventListener("mouseenter", () => {
+    gsap.to(customCrsr, {
+      opacity: 0,
+      duration: 0.3,
+      scale: 0,
+    });
+
+    vContainer.addEventListener("mousemove", (e) => {
+      var x = e.clientX;
+      var y = e.clientY;
+      console.log(e);
+      gsap.to(videoCrsr, {
+        delay: 0.01,
+        left: x + "px",
+        top: y + "px",
+        duration: 0.5,
+        x: -340,
+        y: -120,
+      });
+    });
+  });
+
+  vContainer.addEventListener("mouseleave", () => {
+    gsap.to(videoCrsr, {
+      left: "50%",
+      top: "-10%",
+      duration: 1.2,
+      ease: "power3.out",
+      x: "unset",
+      y: "unset",
+    });
+    gsap.to(customCrsr, {
+      opacity: 1,
+      duration: 0.3,
+      scale: 1,
+    });
+  });
+  videoImg.addEventListener("click", () => {
+    gsap.to(videoImg, {
+      opacity: 0,
+      duration: 0.2,
+    });
+    videos.forEach((video) => {
+      if (video.paused) {
+        gsap.to(video2, {
+          opacity: 1,
+          duration: 0.2,
+        });
+        video.play();
+        gsap.to(videoCrsr, {
+          opacity: 0,
+          duration: 0.2,
+        });
+      } else {
+        video.pause();
+        gsap.to(videoCrsr, {
+          opacity: 1,
+          duration: 0.2,
+        });
+        gsap.to(videoImg, {
+          delay: 1,
+          opacity: 1,
+          duration: 0.2,
+        });
+        gsap.to(video2, {
+          opacity: 0,
+          duration: 0.2,
+        });
+      }
+    });
+  });
+}
+function page4() {
+  var tl = gsap.timeline();
+  var h1About = document.querySelector("#page4-content h1");
+  var para = document.querySelectorAll("#page4-content p");
+  var underline = document.querySelector(".underline");
+  tl.from(h1About, {
+    y: 100,
+    scale: 1,
+    opacity: 0,
+    duration: 0.8,
+  });
+  tl.from(underline, {
+    x: 1500,
+    opacity: 0,
+    duration: 2,
+  });
+  tl.from(para, {
+    y: 100,
+    scale: 1,
+    opacity: 0,
+    stagger: 0.2,
+    duration: 0.8,
+  });
+}
+function page1() {
+  var hero1 = document.querySelector(".hero3 h1 .web");
+  var hero2 = document.querySelector(".hero3 h1 .fe");
+  var webImg = document.querySelector(".web_img");
+
+  hero1.addEventListener("mousemove", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    gsap.to(webImg, {
+      opacity: 1,
+      scale: 1,
+      left: x + "px",
+      top: y + "px",
+      duration: 0.5,
+      ease: "elastic,0.3",
+      transform: "translate(-50%, -50%)",
+    });
+  });
+  hero1.addEventListener("mouseleave", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    gsap.to(webImg, {
+      opacity: 0,
+      duration: 0.5,
+      scale: 0,
+    });
+  });
+  hero2.addEventListener("mousemove", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    gsap.to(webImg, {
+      opacity: 1,
+      scale: 1,
+      left: x + "px",
+      top: y + "px",
+      duration: 0.5,
+      ease: "elastic,0.3",
+      transform: "translate(-50%, -50%)",
+    });
+  });
+  hero2.addEventListener("mouseleave", function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+
+    gsap.to(webImg, {
+      opacity: 0,
+      duration: 0.5,
+      scale: 0,
+    });
+  });
+}
+
+loader();
 cursor();
+videoCrsr();
+page1();
+page4();

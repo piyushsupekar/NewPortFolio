@@ -6,6 +6,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>PortFolioo</title>
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,6 +32,7 @@
     </div>
     <div id="main">
       <div id="page1">
+        <div class="web_img"></div>
         <div id="nav">
           <h1>DS</h1>
           <div id="nav-part2">
@@ -37,20 +42,57 @@
           </div>
         </div>
         <div class="hero">
-          <h1>Dnyaneshwar</h1>
+          <h1>nyaneshwar</h1>
         </div>
         <div class="hero">
-          <h1>Supekar</h1>
+          <h1>Supeka</h1>
         </div>
-        <div class="hero">
-          <h1><span>Web</span><span>/</span><span>FrontEnd</span></h1>
+        <div class="hero hero3">
+          <h1>
+            <span class="web">Web</span><span>/</span
+            ><span class="fe">FrontEnd</span>
+          </h1>
         </div>
         <div class="hero">
           <h1>Developer</h1>
         </div>
       </div>
-      <div id="page2"></div>
+      <div id="page2">
+        <div id="video-container">
+          <div id="video-crsr">
+            <i class="ri-play-large-fill"></i>
+          </div>
+          <div id="video-img-container">
+            <img src="./video-img.jpg" alt="" />
+            <video loop muted src="./4496268-hd_1920_1080_25fps.mp4"></video>
+            <video loop muted src="./4496268-hd_1920_1080_25fps.mp4"></video>
+          </div>
+        </div>
+      </div>
       <div id="page3"></div>
+      <div id="page4">
+        <div id="page4-content">
+          <h1>About <span>Me</span></h1>
+          <div class="underline"></div>
+          <p>
+            With over a year of front-end development experience, I’ve enhanced
+            user experiences by integrating advanced JavaScript animation
+            libraries, elevating visual appeal and functionality. My passion for
+            learning HTML5, CSS3, and JavaScript drives my dedication to
+            delivering impactful, high-quality software solutions.
+          </p>
+          <div id="page4-flex">
+            <img src="./aboutme.jpg" alt="" />
+            <p>
+              We are happy to present our new website and updated version of
+              Obys agency. As before we are open for new projects worldwide!
+              Would you like to have award winning site or unique branding
+              style, please say hi to our manager —info@obys.agency. And we will
+              help you with the pleasure.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script
@@ -69,6 +111,9 @@
       type="text/javascript"
       src="https://unpkg.com/sheryjs/dist/Shery.js"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

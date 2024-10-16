@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "plain light";
 }
 *::selection {
   background: transparent !important;
@@ -27,6 +26,12 @@ body {
   width: 100%;
   color: white;
   cursor: none;
+  background-color: #000;
+  overflow-x: hidden;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
 #crsr {
   height: 2.5vw;
@@ -59,7 +64,7 @@ body {
 .web_img {
   width: 15vw;
   height: 17vw;
-  background-image: url("./web_img.png");
+  background-image: url('./web_img.png');
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -78,7 +83,7 @@ body {
   z-index: 99999;
   background: #000000;
   padding: 25vh 10vw;
-  /* display: none; */
+  display: none;
 }
 .line {
   /* background-color: red; */
@@ -97,7 +102,7 @@ body {
 }
 #line1-part1 h5,
 #line1-part1 h6 {
-  font-family: "silk serif";
+  font-family: 'silk serif';
   font-size: 3vw;
   font-weight: 400;
 }
@@ -124,14 +129,14 @@ body {
 
 @keyframes anime {
   0% {
-    font-family: "plain light";
+    font-family: 'plain light';
     -webkit-text-stroke: 1px white;
     color: white;
     font-weight: 500;
     opacity: 1;
   }
   48% {
-    font-family: "plain light";
+    font-family: 'plain light';
     -webkit-text-stroke: 1px white;
     color: white;
     font-weight: 500;
@@ -139,14 +144,14 @@ body {
   }
   50% {
     color: transparent;
-    font-family: "silk serif";
+    font-family: 'silk serif';
     -webkit-text-stroke: 1px white;
     opacity: 1;
     font-weight: 500;
   }
   100% {
     color: transparent;
-    font-family: "silk serif";
+    font-family: 'silk serif';
     -webkit-text-stroke: 1px white;
     opacity: 0;
     font-weight: 500;
@@ -155,12 +160,9 @@ body {
 
 #main {
   position: relative;
-  overflow-x: hidden;
-  /* background-color: #000000; */
 }
 
 #page1 {
-  /* opacity: 0; */
   height: 100vh;
   width: 100%;
   background-color: #000000;
@@ -168,15 +170,19 @@ body {
 }
 
 #nav {
+  background-color: transparent;
+  backdrop-filter: blur(6px);
   padding: 4vh 4vw;
   display: flex;
   position: sticky;
   top: 0;
+  z-index: 999;
   justify-content: space-between;
   align-items: center;
+  /* box-shadow: 0px 0px 10px -4px white; */
 }
 #nav h1 {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: 30px;
 }
 #nav-part2 {
@@ -189,27 +195,27 @@ body {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 .hero h1 {
   font-size: 6vw;
   /* text-transform: uppercase; */
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-weight: 600;
   overflow: hidden;
   line-height: 14vh;
 }
 #page1 .hero:nth-child(3) h1::before {
-  content: "D";
-  font-family: "Qwitcher Grypen";
+  content: 'D';
+  font-family: 'Qwitcher Grypen';
   font-weight: 900;
   text-transform: uppercase;
   font-size: 11vw;
   margin: 10px;
 }
 #page1 .hero:nth-child(4) h1::after {
-  content: "r";
-  font-family: "Pixelify sans";
+  content: 'r';
+  font-family: 'Pixelify sans';
   font-weight: 500;
   font-size: 6vw;
 }
@@ -239,7 +245,7 @@ body {
 }
 
 .hero h1 span:nth-child(3) {
-  font-family: "silk serif";
+  font-family: 'silk serif';
   font-weight: 400;
   color: transparent;
   -webkit-text-stroke: 1px white;
@@ -306,7 +312,8 @@ body {
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: #333333;
+  background-color: #000000;
+  position: sticky;
 }
 #page4 {
   min-height: 100vh;
@@ -320,17 +327,17 @@ body {
   margin-left: 18%;
 }
 #page4-content h1 {
-  font-size: 6vw;
-  text-transform: uppercase;
-  font-family: "Raleway";
+  font-size: 13vw;
+  font-family: 'Qwitcher Grypen';
   font-weight: 700;
-  overflow: hidden;
   line-height: 14vh;
+  -webkit-box-reflect: below -15px linear-gradient(transparent, #00000019);
+
 }
 #page4-content h1 span {
   font-size: 6vw;
   text-transform: lowercase;
-  font-family: "silk serif";
+  font-family: 'silk serif';
   font-weight: 400;
   color: transparent;
   -webkit-text-stroke: 1px white;
@@ -349,12 +356,18 @@ body {
   height: 85vh;
   object-fit: cover;
   border-radius: 11vw 0vw;
+  margin-top: 5vh;
   box-shadow: 0px 0px 88px -20px #a1bcdb;
+  z-index: 999;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+  transform: rotateY(44deg);
 }
 #page4-flex p {
   text-align: justify;
+  transform: translate(-56px, 102px) rotateY(-22deg);
 }
-#page4-content .underline {
+.underline {
   height: 1px;
   width: 100%;
   background-color: #fff;
@@ -364,5 +377,194 @@ body {
   font-size: 1.6vw;
   width: 90%;
   text-align: justify;
-  font-family: "raleway";
+  font-family: 'raleway';
+}
+#page4-blue-div {
+  width: 35vw;
+  position: relative;
+  background: linear-gradient(45deg, #2d2d2dd9, #000000de);
+  top: -50vh;
+  left: 70vh;
+  height: 30vw;
+  z-index: 999;
+  border-radius: 0px 150px 0px 87px;
+  padding: 2.5vw;
+  border: 1px solid #a2a2a296;
+  transform: rotateY(335deg);
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 37px -17px white;
+  -webkit-box-reflect: below 10px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.blu-div-elem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2vw 0;
+  border-bottom: 1px solid white;
+}
+.blu-div-elem h4 {
+  font-size: 1.5vw;
+  font-family: 'Pixelify sans';
+  text-shadow: 0px 8px 33px rgba(255, 255, 255, 0.637);
+  font-weight: 700;
+}
+.blu-div-elem p {
+  width: 50%;
+  font-size: 1vw;
+  font-family: 'gilroy';
+  text-shadow: 0px 8px 33px rgba(221, 221, 221, 0.779);
+  font-weight: 500;
+}
+#page4-content .underline:nth-child(6) {
+  margin: 0;
+  position: absolute;
+  top: 180vh;
+}
+#page5 {
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.elem {
+  white-space: nowrap;
+  transform: translate(21%, 50%) rotateZ(-13deg);
+}
+.elem2 {
+  white-space: nowrap;
+  transform: rotate(375deg);
+}
+.elem h1 {
+  font-size: 6vw;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-weight: 700;
+  font-family: gilroy;
+  margin-right: 10px;
+  display: inline-block;
+  animation-name: anime1;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.elem2 h1 {
+  font-size: 6vw;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+  font-weight: 700;
+  font-family: gilroy;
+  margin-right: 10px;
+  display: inline-block;
+  animation-name: anime1;
+  animation-duration: 50s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateX(calc(-100% - 20px));
+}
+
+@keyframes anime1 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 14px));
+  }
+}
+
+.elem h1:hover,
+.elem2 h1:hover {
+  transition: all ease 0.3s;
+  color: white !important;
+  text-shadow: 0px 0px 20px -3px white;
+}
+
+.elem h1 i,
+.elem2 h1 i {
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'silk serif';
+  font-size: 5.8vw;
+}
+
+#page4-content {
+  perspective: 55vw;
+}
+#page4-flex {
+  perspective: 55vw;
+}
+
+#footer {
+  min-height: 70vh;
+  width: 100%;
+  padding: 35vh 10vh 20vh 10vh;
+  background-color: #000;
+}
+#footer h1 {
+  font-weight: 900;
+  font-size: 20vh;
+  font-family: 'Qwitcher Grypen';
+  -webkit-box-reflect: below -75px linear-gradient(transparent, #0000004a);
+}
+#footer h1 span {
+  font-weight: 400;
+  font-size: 12vh;
+  font-family: 'silk serif';
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+}
+#footer-box {
+  display: flex;
+  gap: 8vw;
+  justify-content: center;
+  align-items: center;
+}
+.box h2 {
+  font-size: 6vh;
+  font-weight: 600;
+  font-family: 'gilroy';
+}
+#footer-box .box {
+  margin-top: 10vh;
+  width: 100%;
+  border-right: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+#footer-box .box:nth-child(1) {
+  border-left: 1px solid white;
+  padding-left: 10vh;
+}
+#footer-box .box:nth-child(1) p {
+  font-size: 3vh;
+  font-family: 'silk serif';
+}
+.socials {
+  display: flex;
+  gap: 4vw;
+}
+#footer-box .box:nth-child(2) {
+  border-right: 1px solid white;
+  height: 30vh;
+  gap: 6vh;
+}
+.ri-github-fill,
+.ri-instagram-line,
+.ri-twitter-x-line,
+.ri-linkedin-fill,
+.ri-whatsapp-fill {
+  font-size: 5vh;
+}
+.ri-github-fill:hover,
+.ri-instagram-line:hover,
+.ri-twitter-x-line:hover,
+.ri-linkedin-fill:hover,
+.ri-whatsapp-fill:hover {
+  letter-spacing: 0.4vh;
 }

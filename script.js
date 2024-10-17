@@ -65,7 +65,9 @@ function cursor() {
 
   Shery.makeMagnet('#nav-part2 h2,#nav h1,#footer p');
 
-  const h2Elements = document.querySelectorAll('#nav-part2 h2,#nav h1,#footer p');
+  const h2Elements = document.querySelectorAll(
+    '#nav-part2 h2,#nav h1,#footer p'
+  );
 
   h2Elements.forEach((h2) => {
     h2.addEventListener('mouseenter', () => {
@@ -332,7 +334,7 @@ function image() {
   preloadImages();
 }
 
-// loader();
+loader();
 cursor();
 videoCrsr();
 page1();

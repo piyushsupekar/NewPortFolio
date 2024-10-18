@@ -696,6 +696,7 @@ a {
   #page5 {
     min-height: 55vh;
     margin: 20vh 0 0;
+    padding: 10vh 0;
     overflow-x: hidden;
     width: 110vw;
 }
@@ -712,9 +713,17 @@ a {
   .elem h1 i,
   .elem2 h1 i,
   .elem2 h1 {
-    font-size: 15vw;
-    font-weight: 600;
+    font-size: 12vw;
+    font-weight: 700;
+  }
+  
+  .elem h1 ,
+  .elem2 h1 {
     color: white;
+  }
+  .elem h1 i ,
+  .elem2 h1 i{
+    color: transparent;
   }
   #page4-content .underline:nth-child(6) {
     display: none;

@@ -1,8 +1,24 @@
+@font-face {
+  font-family: 'Plain Light';
+  src: url('./fonts/plain-light-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Pixelify sans';
+  src: url('./fonts/PixelifySans-VariableFont_wght.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'silk serif';
+  src: url('./fonts/silkserif-regularitalic-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-VariableFont_wght.woff2') format('woff2');
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "plain light";
+  font-family: 'plain light';
 }
 *::selection {
   background: transparent !important;
@@ -84,7 +100,7 @@ a {
   z-index: 99999;
   background: #000000;
   padding: 25vh 10vw;
-  /* display: none; */
+  display: none;
 }
 .line {
   /* background-color: red; */
@@ -333,7 +349,6 @@ a {
   font-weight: 700;
   line-height: 14vh;
   -webkit-box-reflect: below -15px linear-gradient(transparent, #00000019);
-
 }
 #page4-content h1 span {
   font-size: 6vw;

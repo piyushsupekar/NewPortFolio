@@ -334,7 +334,7 @@ function image() {
   preloadImages();
 }
 
-loader();
+// loader();
 cursor();
 videoCrsr();
 page1();

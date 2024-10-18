@@ -18,9 +18,10 @@
   font-family: 'Qwitcher Grypen';
   src: url('./fonts/QwitcherGrypen-Regular.woff2') format('woff2');
 }
-/* added qwitcher font */
-
-/* sadasdasdasdsadasdas */
+@font-face {
+  font-family: 'gilroy';
+  src: url('./fonts/Gilroy-Bold.woff2') format('woff2');
+}
 * {
   margin: 0;
   padding: 0;
@@ -280,7 +281,6 @@ a {
 .hero h1 span:nth-child(3):hover {
   -webkit-text-stroke: unset;
   color: white;
-  font-size: 6vw;
   border-bottom: 4px solid white;
 }
 #page2 {
@@ -590,4 +590,178 @@ a {
 .ri-linkedin-fill:hover,
 .ri-whatsapp-fill:hover {
   letter-spacing: 0.4vh;
+}
+
+@media screen and (max-width: 992px) {
+  #cursor{
+    display: none;
+  }
+}
+@media screen and (max-width: 528px) {
+  #crsr {
+    display: none;
+}
+  #page1,
+  #page2,
+  #page3{
+    height: 72vh;
+  }
+  .hero h1 {
+    font-size: 11vw;
+    /* text-transform: uppercase; */
+    font-family: 'Raleway';
+    font-weight: 600;
+    overflow: hidden;
+    line-height: 9vh;
+  }
+  #page1 .hero:nth-child(3) h1::before {
+    content: 'D';
+    font-family: 'Qwitcher Grypen';
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 22vw;
+    margin: 10px;
+  }
+  .hero {
+    width: 100%;
+    margin-left: 9%;
+  }
+  #page1 .hero:nth-child(4) h1::after {
+    font-size: 12vw;
+  }
+  #nav-part2 h2 {
+    font-size: 11px;
+  }
+  #nav h1 {
+    font-size: 22px;
+  }
+  #video-container {
+    height: 60vh;
+    width: 100%;
+  }
+  #video-crsr {
+    display: none;
+  }
+  #page4 {
+    height: 90vh !important;
+    padding: 0vh;
+
+  }
+  #page4-content {
+    width: 80vw;
+    position: relative;
+    margin-left: 14%;
+  }
+  #page4-content h1 {
+    font-size: 23vw;
+    line-height: 0vh;
+    -webkit-box-reflect: below -76px linear-gradient(transparent, #00000019);
+  }
+  #page4-content {
+    width: 80vw;
+    margin-left: 10%;
+  }
+  #page4-content > p {
+    font-size: 3.6vw;
+    width: 100%;
+  }
+  #page4-flex {
+    width: 100%;
+    margin-top: 6vw;
+    gap: 18vw;
+  }
+  #page4-flex img {
+    margin-left: 10px;
+    width: 38vw;
+    height: 42vh;
+    transform: rotateY(21deg);
+  }
+  #page4-blue-div {
+    width: 65vw;
+    top: -5vh;
+    left: 4vh;
+    height: 55vw;
+    transform: rotateY(-5deg);
+    -webkit-box-reflect: below 5px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+    padding: 3vh 2vh;
+    overflow: hidden;
+    border-radius: 0px 95px 0px 87px;
+}
+  #page4-flex p {
+    text-align: start;
+    font-size: 3.5vw;
+    transform: translate(-56px, 50px) rotateY(-22deg) !important;
+  }
+  #page5 {
+    min-height: 55vh;
+    margin: 20vh 0 0;
+    overflow-x: hidden;
+    width: 110vw;
+}
+.blu-div-elem h4 {
+  font-size: 4vw;
+  font-family: 'Pixelify sans';
+  text-shadow: 0px 2px 21px rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+.blu-div-elem p {
+  font-size: 1.8vw;
+  }
+  .elem h1,
+  .elem h1 i,
+  .elem2 h1 i,
+  .elem2 h1 {
+    font-size: 15vw;
+    font-weight: 600;
+    color: white;
+  }
+  #page4-content .underline:nth-child(6) {
+    display: none;
+  }
+
+  #footer {
+    padding: 2vh 2vh 12vh 2vh;
+    min
+  }
+  .elem {
+    transform: rotateZ(0deg);
+  }
+  .elem2 {
+    transform: rotateZ(0deg);
+  }
+  #footer h1 {
+    font-size: 11vh;
+    -webkit-box-reflect: below -55px linear-gradient(transparent, #0000004a);
+}
+  #footer h1 span {
+    font-size: 7vh;
+  }
+  .box h2 {
+    font-size: 4vh;
+  }
+  #footer-box .box:nth-child(1) {
+    padding-left: 4vh;
+  }
+  #footer-box .box:nth-child(2) {
+    gap: 5vw;
+  }
+  #footer-box{
+    gap: 4vw;
+  }
+  #footer-box .box {
+    gap: 2vh;
+  }
+  .box p a {
+    font-size: 2vh;
+  }
+  .socials i {
+    margin-top: -10px;
+    font-size: 3.5vh;
+  }
+  .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

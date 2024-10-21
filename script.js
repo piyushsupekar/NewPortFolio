@@ -63,10 +63,12 @@ function cursor() {
     });
   });
 
-  Shery.makeMagnet('#nav-part2 h2,#nav h1,#footer p');
+  Shery.makeMagnet(
+    '#nav-part2 h2,#nav h1,#footer p,.blu-div-elem p img,.blu-div-elem p i'
+  );
 
   const h2Elements = document.querySelectorAll(
-    '#nav-part2 h2,#nav h1,#footer p'
+    '#nav-part2 h2,#nav h1,#footer p,.blu-div-elem p img,.blu-div-elem p i'
   );
 
   h2Elements.forEach((h2) => {
@@ -75,7 +77,7 @@ function cursor() {
         scale: 1.7,
         boxShadow: 'none',
         border: '1px solid rgb(125, 125, 125)',
-        backdropFilter: 'blur(1px)',
+        backdropFilter: 'blur(0px)',
         duration: 0.3,
         ease: Power4,
       });
@@ -350,3 +352,47 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(Draggable);
+
+  Draggable.create('.blu-div-elem,.hero h1', {
+    bounds: {
+      minX: 0,
+      minY: 0,
+      maxX: window.innerWidth - 200,
+      maxY: window.innerHeight - 200,
+      cursor: 'none',
+    },
+    onDrag: function () {},
+    onDragEnd: function () {
+      console.log('Drag Ended at: ', this.x, this.y);
+    },
+  });
+});
+
+// Page 1: Fade-in with scaling effect
+gsap.to('#page1 .hero', {
+  opacity: 0,
+  scale: 0,
+  stagger: 0.2,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '#page1',
+    start: 'top -70vh',
+    end: 'bottom end',
+    scrub: true,
+  },
+});
+gsap.from('#page2 #video-container', {
+  opacity: 0,
+  scale: 3,
+  stagger: 2,
+  duration: 2,
+  scrollTrigger: {
+    trigger: '#video-container',
+    start: 'top 700vh',
+    end: 'top 100vh',
+    scrub: true,
+    markers: true,
+  },
+});

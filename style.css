@@ -188,7 +188,7 @@ a {
 }
 
 #page1 {
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   background-color: #000000;
   position: relative;
@@ -336,8 +336,7 @@ a {
 #page3 {
   min-height: 100vh;
   width: 100%;
-  background-color: #000000;
-  position: sticky;
+  background-color: #a25959a5;
 }
 #page4 {
   min-height: 100vh;
@@ -383,12 +382,21 @@ a {
   box-shadow: 0px 0px 88px -20px #a1bcdb;
   z-index: 999;
   -webkit-box-reflect: below 0px
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
   transform: rotateY(44deg);
+  transition: all ease 0.5s;
+}
+#page4-flex img:hover {
+  box-shadow: 0px 0px 187px -30px #a1bcdb;
+  transform: rotateY(22deg);
 }
 #page4-flex p {
   text-align: justify;
-  transform: translate(-56px, 102px) rotateY(-22deg);
+  transform: translate(-56px, 102px) rotateY(333deg);
+  font-size: 1.1vw;
+}
+#page4-flex:hover p {
+  transform: rotateY(356deg);
 }
 .underline {
   height: 1px;
@@ -406,40 +414,66 @@ a {
   width: 35vw;
   position: relative;
   background: linear-gradient(45deg, #2d2d2dd9, #000000de);
-  top: -50vh;
+  top: -55vh;
   left: 70vh;
-  height: 30vw;
+  height: 32vw;
   z-index: 999;
   border-radius: 0px 150px 0px 87px;
   padding: 2.5vw;
   border: 1px solid #a2a2a296;
-  transform: rotateY(335deg);
+  transform: rotateY(334deg);
   backdrop-filter: blur(8px);
   box-shadow: 0px 0px 37px -17px white;
   -webkit-box-reflect: below 10px
     linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  transition: all ease 0.4s;
 }
-
+#page4-blue-div:hover {
+  transform: rotateY(346deg);
+  box-shadow: 0px 0px 66px -26px white;
+}
 .blu-div-elem {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding: 2vw 0;
   border-bottom: 1px solid white;
 }
 .blu-div-elem h4 {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-family: 'Pixelify sans';
   text-shadow: 0px 8px 33px rgba(255, 255, 255, 0.637);
   font-weight: 700;
 }
 .blu-div-elem p {
+  text-align: end;
   width: 50%;
-  font-size: 1vw;
   font-family: 'gilroy';
   text-shadow: 0px 8px 33px rgba(221, 221, 221, 0.779);
   font-weight: 500;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: unset;
+  gap: 10px;
 }
+.blu-div-elem p i {
+  font-size: 35px;
+}
+.blu-div-elem p i:hover .names {
+  display: initial;
+}
+.blu-div-elem {
+  transition: transform 0.3s ease;
+}
+.dot {
+  position: absolute;
+  background-color: pink;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
 #page4-content .underline:nth-child(6) {
   margin: 0;
   position: absolute;
@@ -593,17 +627,17 @@ a {
 }
 
 @media screen and (max-width: 992px) {
-  #cursor{
+  #cursor {
     display: none;
   }
 }
 @media screen and (max-width: 528px) {
   #crsr {
     display: none;
-}
+  }
   #page1,
   #page2,
-  #page3{
+  #page3 {
     height: 72vh;
   }
   .hero h1 {
@@ -645,7 +679,6 @@ a {
   #page4 {
     height: 90vh !important;
     padding: 0vh;
-
   }
   #page4-content {
     width: 80vw;
@@ -683,11 +716,11 @@ a {
     height: 55vw;
     transform: rotateY(-5deg);
     -webkit-box-reflect: below 5px
-    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+      linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
     padding: 3vh 2vh;
     overflow: hidden;
     border-radius: 0px 95px 0px 87px;
-}
+  }
   #page4-flex p {
     text-align: start;
     font-size: 3.5vw;
@@ -696,33 +729,44 @@ a {
   #page5 {
     min-height: 55vh;
     margin: 20vh 0 0;
+    padding: 10vh 0;
     overflow-x: hidden;
     width: 110vw;
-}
-.blu-div-elem h4 {
-  font-size: 4vw;
-  font-family: 'Pixelify sans';
-  text-shadow: 0px 2px 21px rgba(255, 255, 255, 0.4);
-  font-weight: 600;
-}
-.blu-div-elem p {
-  font-size: 1.8vw;
+  }
+  .blu-div-elem h4 {
+    font-size: 4vw;
+    font-family: 'Pixelify sans';
+    text-shadow: 0px 2px 21px rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+  }
+  .blu-div-elem p {
+    font-size: 1.8vw;
   }
   .elem h1,
   .elem h1 i,
   .elem2 h1 i,
   .elem2 h1 {
-    font-size: 15vw;
+    font-size: 12vw;
     font-weight: 600;
+  }
+
+  .elem h1,
+  .elem2 h1 {
     color: white;
+  }
+  .elem h1 i,
+  .elem2 h1 i {
+    color: transparent;
   }
   #page4-content .underline:nth-child(6) {
     display: none;
   }
+  #video-img-container img {
+    object-position: -100px center;
+  }
 
   #footer {
     padding: 2vh 2vh 12vh 2vh;
-    min
   }
   .elem {
     transform: rotateZ(0deg);
@@ -733,7 +777,7 @@ a {
   #footer h1 {
     font-size: 11vh;
     -webkit-box-reflect: below -55px linear-gradient(transparent, #0000004a);
-}
+  }
   #footer h1 span {
     font-size: 7vh;
   }
@@ -746,7 +790,7 @@ a {
   #footer-box .box:nth-child(2) {
     gap: 5vw;
   }
-  #footer-box{
+  #footer-box {
     gap: 4vw;
   }
   #footer-box .box {

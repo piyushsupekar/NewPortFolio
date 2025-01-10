@@ -366,7 +366,7 @@ function sheryAnimation() {
   // });
 }
 
-// loader();
+loader();
 cursor();
 videoCrsr();
 page1();

@@ -120,7 +120,7 @@ a {
 .web_img {
   width: 15vw;
   height: 17vw;
-  background-image: url('./ui2.jpg');
+  background-image: url('./ui2.webp');
   background-size: cover;
   background-position: center;
   position: fixed;
@@ -132,7 +132,7 @@ a {
 .web_img22 {
   width: 15vw;
   height: 17vw;
-  background-image: url('./ui.jpg');
+  background-image: url('./UI.webp');
   background-size: cover;
   background-position: center;
   position: fixed;

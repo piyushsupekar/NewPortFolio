@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>PortFolioo</title>
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- locomotive css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
+    <!-- shery css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.css"
+    />
+    <!-- remixicon cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- css file  -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="crsr"></div>
-    <div id="loader">
+    <!-- <div id="loader">
       <div class="line">
         <div id="line1-part1">
           <h5>00</h5>
@@ -29,17 +44,19 @@
         <h1>is loading right</h1>
         <h2>Now</h2>
       </div>
-    </div>
+    </div> -->
+    <div id="crsr"></div>
     <div id="main">
-      <div id="page1">
+      <div id="page1" data-scroll>
         <div class="web_img"></div>
         <div id="nav">
           <h1><a href="/index.html">DS</a></h1>
-          <div id="nav-part2">
-            <h2><a href="/about.html">About</a></h2>
-            <h2><a href="/skills.html">Skills</a></h2>
-            <h2><a href="/contact.html">Contact</a></h2>
-          </div>
+          <!-- <div id="nav-part2">
+            <h2><a href="/#page4">About</a></h2>
+            <h2><a href="/#page3">Skills</a></h2>
+            <h2><a href="/#footer">Contact</a></h2>
+          </div> -->
+          <div class="web_img22"></div>
         </div>
         <div class="hero">
           <h1>nyaneshwar</h1>
@@ -49,18 +66,28 @@
         </div>
         <div class="hero hero3">
           <h1>
-            <span class="web">Web</span><span>/</span
-            ><span class="fe">FrontEnd</span>
+            <a
+              href="https://www.google.com/search?q=ui+developer&rlz=1C1PNBB_enIN1124IN1124&oq=ui+deve&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyCggBEAAYyQMYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBggFEEUYOTIGCAYQRRg9MgYIBxBFGDzSAQgyNDY5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+              target="_blank"
+            >
+              <span class="web">Web</span><span>/</span
+              ><span class="fe">FrontEnd</span></a
+            >
           </h1>
         </div>
         <div class="hero">
           <h1>Developer</h1>
         </div>
+        <div class="mouse-scroll">
+          <i class="ri-scroll-to-bottom-line"></i>
+          <h2>Scroll</h2>
+        </div>
       </div>
-      <div id="page2">
+      <div id="page2" data-scroll data-scroll-speed="-1.5">
         <div id="video-container">
           <div id="video-crsr">
             <i class="ri-play-large-fill"></i>
+            <h5>Play</h5>
           </div>
           <div id="video-img-container">
             <img src="./video-img.jpg" alt="" />
@@ -69,69 +96,124 @@
           </div>
         </div>
       </div>
-      <div id="page3">
-        <!-- <canvas id="frames"></canvas> -->
-        <h1>Hi</h1>
-        <h1>Hello</h1>
-        <h1>asd</h1>
-        <h1>adsa</h1>
-        <h1>gdgsds</h1>
-        <h1>dsfgdfsg</h1>
+      <div id="page3" data-scroll data-scroll-speed="-1.5" data>
+        <div id="page3-container">
+          <h1>My <span>Projects</span></h1>
+          <br />
+          <div class="underline"></div>
+          <div class="container1">
+            <a href="https://piyushsupekar.github.io/Planet/" target="_blank"
+              ><div class="cards">
+                <img src="./Project2.jfif" alt="" />
+                <div class="black-box">
+                  <h2>3D Planets</h2>
+                </div>
+              </div></a
+            >
+            <a
+              href="https://piyushsupekar.github.io/Animated-Website/"
+              target="_blank"
+            >
+              <div class="cards">
+                <img src="./project5.png" alt="" />
+                <div class="black-box">
+                  <h2>SIDCUP</h2>
+                </div>
+              </div></a
+            >
+            <a href="https://www.pesmodernwarje.com/" target="_blank">
+              <div class="cards">
+                <img src="./project3.jfif" alt="" />
+                <div class="black-box">
+                  <h2>Modern College</h2>
+                </div>
+              </div></a
+            >
+            <a href="https://www.accollegeumbarthan.ac.in/" target="_blank">
+              <div class="cards">
+                <img src="./project4.jfif" alt="" />
+                <div class="black-box">
+                  <h2>Umbarthan</h2>
+                </div>
+              </div></a
+            >
+          </div>
+        </div>
       </div>
-      <div id="page4">
+      <div id="page4" data-scroll>
         <div id="page4-content">
           <h1>About <span>Me</span></h1>
           <div class="underline"></div>
           <p>
-            With over a year of front-end development experience, I’ve enhanced
+            With over a year of front-end development experience, I've enhanced
             user experiences by integrating advanced JavaScript animation
             libraries, elevating visual appeal and functionality. My passion for
             learning HTML5, CSS3, and JavaScript drives my dedication to
             delivering impactful, high-quality software solutions.
           </p>
           <div id="page4-flex">
-            <img src="./aboutme.jpg" alt="" />
+            <img class="web_img2" src="./aboutme3.jpg" alt="" />
             <p>
               I am thrilled to introduce the latest version of my portfolio,
-              showcasing some of my favorite projects. I’m always open to new
-              opportunities and collaborations worldwide! Whether you’re looking
+              showcasing some of my favorite projects. I'm always open to new
+              opportunities and collaborations worldwide! Whether you're looking
               for an stunning looking websites or a distinctive branding style,
               feel free to reach out at
-              <a href="mailto:piyushsupekar48@gmail.com"
+              <a href="mailto:piyushsupekar48@gmail.com" target="_blank"
                 ><u>piyushsupekar48@gmail.com</u></a
               >
 
-              — I’d be delighted to help bring your vision to life.
+              — I'd be delighted to help bring your vision to life.
             </p>
           </div>
           <div id="page4-blue-div">
             <div class="blu-div-elem">
               <h4>Front - End Development</h4>
               <p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                <a
+                  target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                   ><i class="ri-html5-fill"></i
                 ></a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                <a
+                  target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                   ><i class="ri-css3-fill"></i
                 ></a>
                 <a
+                  target="_blank"
+                  target="_blank"
                   href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                   ><i class="ri-javascript-fill"></i
                 ></a>
-                <a href="https://gsap.com/"
+                <a target="_blank" href="https://gsap.com/"
                   ><img style="width: 35px" src="./gsap-greensock.svg" alt=""
                 /></a>
-                <a href=""><i class="ri-tailwind-css-fill"></i></a>
-                <a href=""><i class="ri-bootstrap-fill"></i></a>
+                <a target="_blank" href="https://tailwindcss.com/"
+                  ><i class="ri-tailwind-css-fill"></i
+                ></a>
+                <a target="_blank" href="https://getbootstrap.com/"
+                  ><i class="ri-bootstrap-fill"></i
+                ></a>
               </p>
             </div>
             <div class="blu-div-elem">
               <h4>Backend Development</h4>
               <p>
-                <i class="ri-nodejs-fill"></i>
-                <img style="width: 35px" src="./express.png" alt="" />
-                <img style="width: 35px" src="./mongo.png" alt="" />
-                <img style="width: 35px" src="./rest.png" alt="" />
+                <a target="_blank" href="https://nodejs.org/en">
+                  <i class="ri-nodejs-fill"></i
+                ></a>
+                <a target="_blank" href="https://expressjs.com/"
+                  ><img style="width: 35px" src="./express.png" alt=""
+                /></a>
+                <a target="_blank" href="https://www.mongodb.com/"
+                  ><img style="width: 35px" src="./mongo.png" alt=""
+                /></a>
+                <a
+                  target="_blank"
+                  href="https://www.geeksforgeeks.org/rest-api-introduction/"
+                  ><img style="width: 35px" src="./rest.png" alt=""
+                /></a>
               </p>
             </div>
             <div class="blu-div-elem">
@@ -139,29 +221,56 @@
                 Development Tools & Version Control
               </h4>
               <p>
-                <i class="ri-git-branch-line"></i>
-                <i class="ri-github-fill"></i>
-                <img style="width: 35px" src="./rest.png" alt="" />
-                <i class="ri-gitlab-fill"></i>
-                <i class="ri-npmjs-fill"></i>
+                <a
+                  target="_blank"
+                  href="https://www.w3schools.com/git/git_branch.asp"
+                >
+                  <i class="ri-git-branch-line"></i
+                ></a>
+                <a target="_blank" href="https://github.com/">
+                  <i class="ri-github-fill"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.geeksforgeeks.org/rest-api-introduction/"
+                  ><img style="width: 35px" src="./rest.png" alt=""
+                /></a>
+                <a target="_blank" href="https://about.gitlab.com/"
+                  ><i class="ri-gitlab-fill"></i
+                ></a>
+                <a
+                  target="_blank"
+                  href="https://www.npmjs.com/package/accessibility"
+                >
+                  <i class="ri-npmjs-fill"></i
+                ></a>
               </p>
             </div>
             <div class="blu-div-elem">
               <h4>Frameworks & Libraries</h4>
               <p>
-                <i class="ri-angularjs-fill"></i>
-                <i class="ri-reactjs-fill"></i>
-                <img style="width: 35px" src="./gsap-greensock.svg" alt="" />
-                <img style="width: 30px" src="shery.webp" alt="" />
-                <img style="width: 35px" src="./three.png" alt="" />
+                <a target="_blank" href="https://angular.dev/">
+                  <i class="ri-angularjs-fill"></i
+                ></a>
+                <a target="_blank" href="https://react.dev/">
+                  <i class="ri-reactjs-fill"></i
+                ></a>
+                <a target="_blank" href="https://gsap.com/"
+                  ><img style="width: 35px" src="./gsap-greensock.svg" alt=""
+                /></a>
+                <a target="_blank" href="https://sheryians.com/"
+                  ><img style="width: 30px" src="shery.webp" alt=""
+                /></a>
+                <a target="_blank" href="https://threejs.org/"
+                  ><img style="width: 35px" src="./three.png" alt=""
+                /></a>
               </p>
             </div>
           </div>
-          <div class="dot"></div>
           <div class="underline"></div>
         </div>
       </div>
-      <div id="page5">
+      <div id="page5" data-scroll>
         <div class="elem">
           <h1>UI/UX - <i>Web-Developer</i> / Designer - FrontEnd -</h1>
           <h1>UI/UX - <i>Web-Developer</i> / Designer - FrontEnd -</h1>
@@ -179,17 +288,16 @@
           <h1>JavaScript - Angular - React - GSAP - <i> Tailwind </i>-</h1>
         </div>
       </div>
-      <div id="footer">
+      <div id="footer" data-scroll>
         <h1>Contact <span> me </span></h1>
         <div class="underline"></div>
         <div id="footer-box">
-          <div class="box">
+          <!-- <div class="box">
             <h2>About</h2>
-            <p><a href="/about.html">About Me</a></p>
-            <p><a href="/contact.html">Contact</a></p>
-            <p><a href="/skills.html">Skills</a></p>
-            <p><a href="/contact.html">Contact</a></p>
-          </div>
+            <p><a href="/#page4" id="aboutLink">About Me</a></p>
+            <p><a href="/#page3">Skills</a></p>
+            <p><a href="/#footer">Contact</a></p>
+          </div> -->
           <div class="box">
             <h2>Connect</h2>
             <div class="socials">
@@ -227,30 +335,45 @@
             </div>
           </div>
         </div>
+        <div style="margin-top: 10vh" class="underline"></div>
+        <h5>© All Rights are Reserved by Dnyaneshwar Supekar</h5>
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+
+    <!-- gsap cdn  -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- scrolltrigger cdn  -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+
+    <!-- Three JS cdn  -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
+    <script type="module">
+      import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.module.js';
+    </script>
+
+    <!-- controlKit for debunging -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <!-- Shery JS cdn  -->
     <script
       type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
+      src="https://cdn.jsdelivr.net/gh/aayushchouhan24/sheryjs@main/dist/Shery.js"
     ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <!-- JavaScript file  -->
     <script src="script.js"></script>
   </body>
 </html>

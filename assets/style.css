@@ -166,10 +166,10 @@ a{
     font-size:.7vw
 }
 .web_img{
-    background-image:url('./assets/images/ui2.webp')
+    background-image:url('./images/ui2.jpg')
 }
 .web_img22{
-    background-image:url('./assets/images/UI.webp')
+    background-image:url('./images/UI.jpg')
 }
 .hero,.line{
     height:fit-content

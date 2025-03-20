@@ -1,3 +1,32 @@
+@font-face{
+    font-family:'Plain Light';
+    src:url('./fonts/plain-light-webfont.woff2') format('woff2');
+}
+@font-face{
+    font-family:'Pixelify sans';
+    src:url('./fonts/PixelifySans-VariableFont_wght.woff2') format('woff2');
+}
+@font-face{
+    font-family:'silk serif';
+    src:url('./fonts/silkserif-regularitalic-webfont.woff2') format('woff2');
+}
+@font-face{
+    font-family:Raleway;
+    src:url('./fonts/Raleway-VariableFont_wght.woff2') format('woff2');
+}
+@font-face{
+    font-family:'Qwitcher Grypen';
+    src:url('./fonts/QwitcherGrypen-Regular.woff2') format('woff2');
+}
+@font-face{
+    font-family:gilroy;
+    src:url('./fonts/Gilroy-Bold.woff2') format('woff2');
+}
+@font-face{
+    font-family:mekgen;
+    src:url('./fonts/mekgen.otf') format('opentype');
+}
+
 a,body{
     color:#fff
 }
@@ -58,34 +87,6 @@ a,body{
 }
 #main,.cards,.hero h1,.image-div,.line{
     overflow:hidden
-}
-@font-face{
-    font-family:'Plain Light';
-    src:url('/fonts/plain-light-webfont.woff2') format('woff2')
-}
-@font-face{
-    font-family:'Pixelify sans';
-    src:url('/fonts/PixelifySans-VariableFont_wght.woff2') format('woff2')
-}
-@font-face{
-    font-family:'silk serif';
-    src:url('/fonts/silkserif-regularitalic-webfont.woff2') format('woff2')
-}
-@font-face{
-    font-family:Raleway;
-    src:url('/fonts/Raleway-VariableFont_wght.woff2') format('woff2')
-}
-@font-face{
-    font-family:'Qwitcher Grypen';
-    src:url('/fonts/QwitcherGrypen-Regular.woff2') format('woff2')
-}
-@font-face{
-    font-family:gilroy;
-    src:url('/fonts/Gilroy-Bold.woff2') format('woff2')
-}
-@font-face{
-    font-family:mekgen;
-    src:url('/fonts/mekgen.otf') format('otf')
 }
 *{
     margin:0;

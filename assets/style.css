@@ -185,7 +185,7 @@ a{
     position:fixed;
     z-index:99999;
     background:#000;
-    padding:25vh 10vw
+    padding:25vh 10vw;
 }
 .line{
     display:flex;
@@ -344,6 +344,9 @@ a{
 #page2{
     height:100vh;
     width:100%
+}
+.resp-btn{
+    opacity: 0;
 }
 #video-container{
     height:70vh;
@@ -675,6 +678,29 @@ a{
         text-transform:uppercase;
         font-size:22vw;
         margin:10px
+    }
+    #page3 h1::before {
+        content: '03';
+        position: absolute;
+        font-size: 10vw;
+        font-style: italic;
+        color: transparent;
+        left: 5%;
+    }
+    #page3-container h1 {
+        font-size: 17vw!important;
+        font-family: 'Qwitcher Grypen';
+        font-weight: 700;
+        line-height: 14vh;
+        -webkit-box-reflect: below -86px linear-gradient(transparent,#00000019);
+    }
+    #page3 h1 span, #page4-content h1 span {
+        font-size: 10vw;
+        text-transform: lowercase;
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+        overflow: hidden;
+        line-height: 14vh;
     }
     .hero{
         width:100%;

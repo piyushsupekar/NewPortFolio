@@ -1,31 +1,31 @@
 
 @font-face{
     font-family:'Plain Light';
-    src:url('./assets/fonts/plain-light-webfont.woff2') format('woff2')
+    src:url('./fonts/plain-light-webfont.woff2') format('woff2')
 }
 @font-face{
     font-family:'Pixelify sans';
-    src:url('./assets/fonts/PixelifySans-VariableFont_wght.woff2') format('woff2')
+    src:url('./fonts/PixelifySans-VariableFont_wght.woff2') format('woff2')
 }
 @font-face{
     font-family:'silk serif';
-    src:url('./assets/fonts/silkserif-regularitalic-webfont.woff2') format('woff2')
+    src:url('./fonts/silkserif-regularitalic-webfont.woff2') format('woff2')
 }
 @font-face{
     font-family:Raleway;
-    src:url('./assets/fonts/Raleway-VariableFont_wght.woff2') format('woff2')
+    src:url('./fonts/Raleway-VariableFont_wght.woff2') format('woff2')
 }
 @font-face{
     font-family:'Qwitcher Grypen';
-    src:url('./assets/fonts/QwitcherGrypen-Regular.woff2') format('woff2')
+    src:url('./fonts/QwitcherGrypen-Regular.woff2') format('woff2')
 }
 @font-face{
     font-family:gilroy;
-    src:url('./assets/fonts/Gilroy-Bold.woff2') format('woff2')
+    src:url('./fonts/Gilroy-Bold.woff2') format('woff2')
 }
 @font-face{
     font-family:mekgen;
-    src:url('./assets/fonts/mekgen.otf') format('otf')
+    src:url('./fonts/mekgen.otf') format('otf')
 }
 a,body{
     color:#fff
